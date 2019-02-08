@@ -5,7 +5,7 @@ class SongsController < ApplicationController
   def create
   end
   
-  def index
+  def update
   end
   
   def index
