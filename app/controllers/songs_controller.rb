@@ -30,6 +30,11 @@ class SongsController < ApplicationController
     @song = Song.new
   end
   
+  def destroy
+       @song.destroy
+    redirect_to songs_path
+  end
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_song
