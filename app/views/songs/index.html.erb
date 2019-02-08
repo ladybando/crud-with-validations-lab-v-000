@@ -17,8 +17,8 @@
   <tr><%= link_to(song.title, edit_song_path(song)) %></tr>
 
 
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', song %></td>
+        <td><%= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
