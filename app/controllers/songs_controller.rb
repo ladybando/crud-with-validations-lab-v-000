@@ -5,11 +5,15 @@ class SongsController < ApplicationController
 
   def create
     @song = Song.new(song_params)
-  if @song.valid?
-      @song.save
-      redirect_to song_path(@song)
-    else
-      render :new
+
+    respond_to do |format|
+      if @song.save
+        format.html { redirect_to song_path(@song), notice: 'Song was successfully created.' }
+        format.json { render :show, status: :created, location: @song }
+      else
+        format.html { render :new }
+        format.json { render json: @song.errors, status: :unprocessable_entity }
+      end
     end
   end
   
