@@ -11,7 +11,7 @@ class SongsController < ApplicationController
   def show
   end
   
-  def index
+  def new
   end
   
   private
