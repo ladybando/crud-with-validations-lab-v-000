@@ -8,11 +8,11 @@ class SongsController < ApplicationController
 
     respond_to do |format|
       if @song.save
-        format.html { redirect_to @post, notice: 'Post was successfully created.' }
-        format.json { render :show, status: :created, location: @post }
+        format.html { redirect_to @song, notice: 'Song was successfully created.' }
+        format.json { render :show, status: :created, location: @song }
       else
         format.html { render :new }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
+        format.json { render json: @song.errors, status: :unprocessable_entity }
       end
     end
   end
