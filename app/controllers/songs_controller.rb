@@ -8,7 +8,7 @@ class SongsController < ApplicationController
   def update
   end
   
-  def index
+  def show
   end
   
   def index
