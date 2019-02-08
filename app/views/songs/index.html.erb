@@ -15,7 +15,7 @@
 
 <% @songs.each do |song|%>
   <tr><%= link_to(song.title, edit_song_path(song)) %></tr>
-<%end%>
+
 
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
