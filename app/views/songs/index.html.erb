@@ -12,17 +12,11 @@
   </thead>
 
   <tbody>
-<% @songs.each do |song| %>
-  <p>
-    <%= song.id %>
-    <%= song.title %>
-    <%= song.released %>
-    <%= song.release_year %>
-    <%= song.artist_name %>
-    <%= song.genre %>
-    <%= song.created_at%>
-    <%= song.updated_at %>
-  </p>
+<tbody>
+<%@songs.each do |song|%>
+  <tr><%= link_to(song.title, edit_song_path(song)) %></tr>
+<%end%>
+</tbody>
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_song_path(post) %></td>
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
