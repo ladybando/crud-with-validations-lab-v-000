@@ -4,6 +4,7 @@ class SongsController < ApplicationController
   end
 
   def create
+    @song = Song.create!()
   end
   
   def update
