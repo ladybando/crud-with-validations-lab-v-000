@@ -12,7 +12,7 @@
   </thead>
 
   <tbody>
-<tbody>
+
 <% @songs.each do |song|%>
   <tr><%= link_to(song.title, edit_song_path(song)) %></tr>
 <%end%>
